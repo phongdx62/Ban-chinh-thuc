@@ -1,12 +1,10 @@
 <?php 
-	require("../../public/library/database.php");
+	include("../models/m_music.php");
 	$id = addslashes(stripslashes($_GET["id"]));
-
-	$sql = "DELETE FROM music WHERE id = $id";
-	$data = new database();
-	$data->query($sql);
-	$data->disconnect();
+	$music = new music();
+	$music->m_del_music($id);
+	$music->disconnect();
 	ob_start(); 
 	header('Location: list_music.php');
-	ob_end_flush(); 	
+	ob_end_flush(); 
 ?>
