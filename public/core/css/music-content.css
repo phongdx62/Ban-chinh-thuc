@@ -1,0 +1,181 @@
+*{margin:0;padding: 0; box-sizing: border-box;}
+
+.body {
+    background-image: url("../image/nancy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.428571429;
+}
+
+.player {
+    background-image: url("../image/nancy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    z-index: 2;
+    position: relative;
+    height: 290px;
+}
+
+.title, .artist {
+    font-family: Roboto,sans-serif;
+    left: 167px;
+    position: absolute;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    top: 22px;
+    left: 50%;
+}
+.artist {
+    color: #EEEEEE;
+    font-size: 14px;
+    top: 40px;
+    left: 50%;
+}
+
+.cover {
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 5px 5px 5px;
+    height: 250px;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    width: 240px;
+}
+.controls {
+    cursor: pointer;
+    position: absolute;
+    left: 275px;
+    top: 241px;
+}
+
+.controls {
+    display: flex;
+}
+.controls i {
+    color: rgba(256,256,256, .9);
+    font-size: 1.6rem;
+}
+.controls .rew {
+    margin-left: 15px;
+    margin-right: 32px;
+}
+.controls .play {
+    margin-right: 32px;
+}
+.controls .pause {
+    margin-right: 32px;
+    display: none;
+}
+.controls .fwd {
+
+    margin-right: 32px;
+}
+.controls .play i:hover {
+    color: #3ea24c;
+}
+.controls .pause i:hover {
+    color: #3ea24c;
+}
+.controls .rew i:hover {
+    color: #3ea24c;
+}
+.controls .fwd i:hover {
+    color: #3ea24c;
+}
+.hidden {
+    display: none;
+}
+.controls .visible {
+    display: block;
+}
+
+.viewlist {
+    overflow-y: scroll;
+}
+
+.force-overflow {
+
+}
+
+#style-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+} 
+
+#style-1::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(256, 256, 256, .4);
+}
+
+
+
+.playlist {
+    background-color: transparent;
+    list-style-type: none;    
+    position: relative;
+    z-index: 1;
+    height: 290px;
+    margin: 0;
+}
+
+
+.playlist li {
+    color: #EEEEEE;
+    cursor: pointer;
+}
+
+.playlist li:hover {
+    background-color: rgba(256, 256, 256, .1);
+}
+
+.playlist li.active {
+    font-weight: bold;
+    color: #16e58a;
+}
+
+.playlist a.active {
+    font-weight: bold;
+    color: #16e58a;
+}
+
+.bai-hat-tuan {
+    display: flex;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+    padding: 8px 12px;
+    align-items: center;
+}
+
+.bai-hat-tuan a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.bai-hat-tuan .number {
+    font-size: 15px;
+    padding-right: 12px;
+}
+
+.bai-hat-tuan .info {
+    flex-grow: 1;
+}
+
+.bai-hat-tuan .info .singer a {
+    font-size: 13px;
+    color: rgba(256,256,256,.5);
+}
+
+

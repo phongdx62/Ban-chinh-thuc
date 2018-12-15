@@ -1,0 +1,59 @@
+*{margin:0;padding: 0; box-sizing: border-box;}
+
+a.navbar-brand.mx-4, i.fas.fa-circle {
+	transition: all 0.4s ease;
+}
+
+a.navbar-brand.mx-4:hover {
+    color: #16e58a;
+}
+
+a.navbar-brand.mx-4:hover i.fas.fa-circle {
+	color: #16e58a;
+}
+
+button.btn.btn-outline-success.my-2.my-sm-0 {
+	transition: all 0.4s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40,167,69,1);
+}
+
+form.form-inline.my-2.my-lg-0 {
+    margin: 0 55px;
+}
+
+.info-user{
+    text-align: center;
+    font-size: 14px;
+}
+
+.info-user a{
+	display: block;
+	color: #FFF;
+}
+
+.info-user a:hover {
+	color: #16e58a;
+}
+
+a#dropdownMenuLink {
+    background-color: #181412;
+    border-color: #181412;
+    font-size: 1.25rem;
+    box-shadow: none;
+}
+
+.navbar-brand.ml-4.mr-3:hover i {
+    cursor: pointer;
+    color: #16e58a;
+}
+
+.navbar-brand.ml-4.mr-3:hover a#dropdownMenuLink {
+    color: #16e58a;
+}
+
+.dropdown-menu.show {
+    left: 40px;
+}

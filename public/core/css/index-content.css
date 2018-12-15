@@ -1,0 +1,149 @@
+*{margin:0;padding: 0; box-sizing: border-box;}
+
+.body {
+	
+    background-image: url("../image/nancy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    line-height: 1.428571429;
+    background-attachment: fixed;
+}
+
+.body a:hover {
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.content > .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;  
+    flex-grow: 1;
+    transition: all .4s ease;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.box > .avatar > .overload {
+    position: relative;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(3,3,3,0.6) 100%);
+    cursor: pointer;
+}
+
+.box > .avatar > .overload > span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+    color: #9befdf;
+}
+
+.box > .avatar > .overload:hover span{
+    opacity: 1;
+    transform: scale(1.5);
+    color: #9befdf;
+}
+
+
+.avatar img {
+    width: 190px;
+    height: 150px;
+}
+
+.box > .name {
+    color: #FFF;
+    line-height: 2rem;
+}
+
+.box > .singer {
+    color: rgb(256,256,256, .5);
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
+
+.box .avatar .overload:hover img{
+    animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.breadcrumb a {
+    color: #FFF;
+    font-size: 14px;
+}
+
+.breadcrumb a:hover {
+    color: #9befdf;
+}
+
+.bai-hat-tuan {
+    display: flex;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    padding: 12px 0px;
+    align-items: center;
+
+}
+
+.bai-hat-tuan a {
+    text-decoration: none;
+    color: #000;
+}
+
+.bai-hat-tuan .number {
+    font-size: 16px;
+    color: #FFF;
+    padding:8px 18px 8px 0px;
+}
+
+
+.bai-hat-tuan .info {
+    flex-grow: 1;
+    border-bottom: 1px solid #f1f2f2;
+}
+
+.bai-hat-tuan .info #id-name {
+    color: #FFF;
+}
+
+.bai-hat-tuan .info .title:hover #id-name{
+    color: #0ba14b;
+}
+
+.bai-hat-tuan .info .singer a {
+    font-size: 13px;
+    color: rgba(256,256,256, .5);
+}
+
+.bai-hat-tuan .info .singer:hover #id-singer {
+    color: #0ba14b;
+}

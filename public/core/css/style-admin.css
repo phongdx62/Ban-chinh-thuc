@@ -1,0 +1,80 @@
+*{margin:0;padding: 0; box-sizing: border-box;}
+
+body{
+	font-family: Roboto, sans-serif;
+}
+
+#top{
+	height: 100px;
+	background: #00CC66;
+	line-height: 100px;
+	text-align: center;
+}
+
+#top h3 {
+	padding-top: 35px;
+}
+
+#top a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#top a:hover {
+	text-decoration: underline;
+}
+
+
+#menu li{
+	float: left;
+	width: 555px;
+	border-right: 1px solid #FFF;
+	text-align: center;
+	line-height: 30px;
+	background: #00CC66;
+	list-style-type: none;
+}
+
+#menu a{
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+}
+
+
+#duoi table{
+	border-collapse: collapse;/*Chỉ sử dụng cho table để tạo đường viền*/
+	width: 100%;
+	text-align: center;
+}
+
+#duoi table tr{
+	border: 1px solid #0C6; /*Định dạng đường viền cho dòng*/
+	line-height: 25px; /*Tăng chiều cao cho dòng*/
+}
+
+#duoi table td{
+	border: 1px solid #0C6; /*Định dạng đường viền cho cột*/
+}
+
+#bottom{
+	height: 40px;
+	line-height: 40px;
+	background: #00CC66;
+	text-align: center;
+	color: rgba(256,256,256, .8);
+	margin-top: 3rem;
+
+}
+
+tr a {
+	text-decoration: none;
+}
+
+tr a:hover {
+	text-decoration: underline;
+}
