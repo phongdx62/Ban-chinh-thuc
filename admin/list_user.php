@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION["level"] == 1)
+    if($_SESSION["level"] == 2)
     {
         include("../models/m_user.php");
         require("templates/header.php");
