@@ -1,7 +1,7 @@
 <?php
     session_start();
     require("../models/m_user.php");
-    if($_SESSION["level"] == 1)
+    if($_SESSION["level"] == 2)
     {
         require("templates/header.php");
         require("templates/js_sendmail.php");
@@ -61,7 +61,7 @@
         <div class="container">
             <div class="form-container">
                 <form action="send_mail.php?userid=<?php echo $userid; ?>" method="post">
-                    <label for="email">Địa chỉ email:</label>
+                    <label for="email" style="color: #C71585;">Địa chỉ email:</label>
                     <input id="email" type="email" name="email" value="<?php echo $row['email']; ?>" required>
                     
 <?php  
