@@ -1,7 +1,7 @@
 <?php
     session_start();
     require("../models/m_user.php");
-    if($_SESSION["level"] == 1)
+    if($_SESSION["level"] == 2)
     {
         require("templates/header.php");
         require("templates/js_sendmail.php");
@@ -25,11 +25,6 @@
                 {
                     while ($row=$user->fetch_assoc()) 
                     {
-                        //Hàm htmlentities() sẽ chuyển các kí tự thích hợp thành các kí tự HTML entiies.
-                        //Kí thự HTML entiies là các kí tự dùng để hiển thị các biểu tượng, kí tự trong HTML. Ví dụ muốn hiển thị 5 dấu cách, nếu bạn chỉ sử dụng dấu cách bình thường trình duyệt sẽ loại bỏ 4 dấu và chỉ dữ lại 1 dấu cách, muốn hiển thị tất cả bạn sẽ phải sử dụng HTML entiies.
-                        //Hàm trim() sẽ loại bỏ khoẳng trắng( hoặc bất kì kí tự nào được cung cấp) dư thừa ở đầu và cuối chuỗi.
-                        //Hàm stripslashes() sẽ loại bỏ các dấu backslashes ( \ ) có trong chuỗi. ( \ ' sẽ trở thành ' , \\ sẽ trở thành \).
-                        //Hàm trả về chuỗi với các kí tự backslashes đã bị loại bỏ.
                         $email = htmlentities(trim(stripcslashes($row["email"])));
                         $username = htmlentities(trim(stripcslashes($row["username"])));
                         $new_title = htmlentities(trim($title));
