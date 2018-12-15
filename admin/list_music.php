@@ -1,12 +1,12 @@
 <?php 
     session_start();
-    require("../public/library/database.php");
-    if($_SESSION["level"] == 1)
+    if($_SESSION["level"] == 2)
     {
+        include("../models/m_music.php");
         require("templates/header.php");
         echo"<form action='../admin/list_music.php'>";
         require("templates/search_ad.php");
-        
+
         if (isset($_REQUEST['ok'])) 
         {
             $key = addslashes(stripslashes($_GET['key']));
@@ -16,29 +16,9 @@
             } 
             else
             {
-                $data = new database();
-                $sql = "SELECT * FROM music WHERE song LIKE '%$key%' OR singer LIKE '%$key%' OR musician LIKE '%$key%' OR country LIKE '%$key%' OR style LIKE '%$key%' ";
- 
-                
-                $data->query($sql);
-                $num = $data->num_rows();
-                if ($num > 0 && $key != "") 
-                {
-                    echo "<p style='color:#0000FF;'>$num kết quả trả về với từ khóa <b>$key</b></p>";
-                    echo '<table border="1" cellspacing="0" cellpadding="10">'; 
-                    require("templates/table_music.php");
-                                     
-                    while ($data->fetch_assoc()) 
-                    {
-                        require("templates/show_music.php");
-                    }                   
-                } 
-                else 
-                {
-                    echo"<p style='color:red;'>* Không tìm thấy kết quả!;</p>";
-                }
-                
-                $data->disconnect();
+                $music = new music();
+                $music->m_search_music($key);
+                $music->disconnect();
             }
                 echo"</table>";
             echo"</div>";
@@ -49,17 +29,17 @@
                 echo"<a style='color: #FF33FF;' href='add_list_music.php'>Thêm bài hát</a>";
             echo"</div>";
             require("templates/table_music.php");
-            $data = new database();
-            $sql = "SELECT * FROM music";
-            
-            $data->query($sql);
+        
+            $sql = "SELECT id, song, singer, musician, country, style, new, best, topten FROM music";
+            $music = new music();
+            $music->query($sql);
 
-            while ($row = $data->fetch_assoc()) 
+            while ($row = $music->fetch_assoc()) 
             {
                 require("templates/show_music.php");
             }           
 
-            $data->disconnect();
+            $music->disconnect();
 
                 echo"</table>";
             echo"</div>";   
